@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(HW1)
+project(HW2)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -68,11 +68,8 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-#generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
 
+#generate_messages(DEPENDENCIES std_msgs)
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
 ################################################
@@ -102,12 +99,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
-  INCLUDE_DIRS include
-  LIBRARIES HW1
-  CATKIN_DEPENDS roscpp rospy std_msgs
-  DEPENDS system_lib
-)
+catkin_package()
 
 ###########
 ## Build ##
@@ -150,9 +142,9 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
-add_executable(hw1 src/hw1.cpp)
-target_link_libraries(hw1 ${catkin_LIBRARIES})
-add_dependencies(hw1 beginner_tutorials_generate_messages_cpp)
+add_executable(hw2 src/hw2.cpp)
+target_link_libraries(hw2 ${catkin_LIBRARIES})
+add_dependencies(hw2 beginner_tutorials_generate_messages_cpp)
 
 #############
 ## Install ##
